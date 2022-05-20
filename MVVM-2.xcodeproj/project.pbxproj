@@ -15,6 +15,10 @@
 		7CDA04982837F6E000AD2630 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CDA04972837F6E000AD2630 /* TableViewController.swift */; };
 		7CDA049A2837F71B00AD2630 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CDA04992837F71B00AD2630 /* Profile.swift */; };
 		7CDA049C2837F8F100AD2630 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CDA049B2837F8F100AD2630 /* TableViewCell.swift */; };
+		7CDA04A02837FD5F00AD2630 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CDA049F2837FD5F00AD2630 /* ViewModel.swift */; };
+		7CDA04A22837FE2E00AD2630 /* TableViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CDA04A12837FE2E00AD2630 /* TableViewModelType.swift */; };
+		7CDA04A62838027C00AD2630 /* TableViewCellViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CDA04A52838027C00AD2630 /* TableViewCellViewModelType.swift */; };
+		7CDA04A82838034D00AD2630 /* TableViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CDA04A72838034D00AD2630 /* TableViewCellViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +32,10 @@
 		7CDA04972837F6E000AD2630 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		7CDA04992837F71B00AD2630 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		7CDA049B2837F8F100AD2630 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		7CDA049F2837FD5F00AD2630 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		7CDA04A12837FE2E00AD2630 /* TableViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewModelType.swift; sourceTree = "<group>"; };
+		7CDA04A52838027C00AD2630 /* TableViewCellViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellViewModelType.swift; sourceTree = "<group>"; };
+		7CDA04A72838034D00AD2630 /* TableViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,7 +68,8 @@
 		7CDA04822837F67400AD2630 /* MVVM-2 */ = {
 			isa = PBXGroup;
 			children = (
-				7CDA04972837F6E000AD2630 /* TableViewController.swift */,
+				7CDA04A32837FF3A00AD2630 /* ViewModel */,
+				7CDA04A42837FF4300AD2630 /* Protocols */,
 				7CDA049E2837F9D900AD2630 /* View */,
 				7CDA049D2837F9A700AD2630 /* Model */,
 				7CDA04832837F67400AD2630 /* AppDelegate.swift */,
@@ -84,9 +93,28 @@
 		7CDA049E2837F9D900AD2630 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				7CDA04972837F6E000AD2630 /* TableViewController.swift */,
 				7CDA049B2837F8F100AD2630 /* TableViewCell.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		7CDA04A32837FF3A00AD2630 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				7CDA049F2837FD5F00AD2630 /* ViewModel.swift */,
+				7CDA04A72838034D00AD2630 /* TableViewCellViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		7CDA04A42837FF4300AD2630 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				7CDA04A12837FE2E00AD2630 /* TableViewModelType.swift */,
+				7CDA04A52838027C00AD2630 /* TableViewCellViewModelType.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -160,10 +188,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7CDA04A62838027C00AD2630 /* TableViewCellViewModelType.swift in Sources */,
 				7CDA049C2837F8F100AD2630 /* TableViewCell.swift in Sources */,
 				7CDA04982837F6E000AD2630 /* TableViewController.swift in Sources */,
 				7CDA049A2837F71B00AD2630 /* Profile.swift in Sources */,
 				7CDA04842837F67400AD2630 /* AppDelegate.swift in Sources */,
+				7CDA04A22837FE2E00AD2630 /* TableViewModelType.swift in Sources */,
+				7CDA04A82838034D00AD2630 /* TableViewCellViewModel.swift in Sources */,
+				7CDA04A02837FD5F00AD2630 /* ViewModel.swift in Sources */,
 				7CDA04862837F67400AD2630 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
