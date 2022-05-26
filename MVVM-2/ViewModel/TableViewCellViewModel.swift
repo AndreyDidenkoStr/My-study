@@ -19,7 +19,7 @@ class TableViewCellViewModel: TableViewCellViewModelType {
         return String(describing: profile.age)
     }
     
-    init(profiel: Profile) {
-        self.profile = profiel
+    init(profile: Profile) {
+        self.profile = profile
     }
 }

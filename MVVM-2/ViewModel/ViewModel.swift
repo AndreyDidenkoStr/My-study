@@ -11,15 +11,12 @@ import Foundation
 
 class ViewModel: tableViewViewModelType {
     
+    private var selectedIndexPath: IndexPath?
     
-
     func nomberOfRows() -> Int { 
         return profiles.count
     }
      
-  
-    
-    
     var profiles = [
         Profile(name: "John", secondName: "Smith", age:  33),
         Profile(name: "Max", secondName: "Kolby", age:  33),
@@ -28,6 +25,15 @@ class ViewModel: tableViewViewModelType {
     
     func cellViewModel(forIndexPath indexPath: IndexPath) -> TableViewCellViewModelType? {
         let profile = profiles[indexPath.row]
-        return TableViewCellViewModel(profiel: profile)
+        return TableViewCellViewModel(profile: profile)
+    }
+    
+    func viewModelForSelectionRow() -> DetailViewModelType? {
+        guard let selectedIndexPath = selectedIndexPath else { return nil }
+        return DetailViewModel(profile: profiles[selectedIndexPath.row])
+    }
+    
+    func selectRow(atIndexPath indexPath: IndexPath) {
+        self.selectedIndexPath = indexPath
     }
 }

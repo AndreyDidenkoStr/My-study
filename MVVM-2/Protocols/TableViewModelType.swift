@@ -10,4 +10,7 @@ import Foundation
 protocol tableViewViewModelType {
     func nomberOfRows() -> Int
     func cellViewModel(forIndexPath indexPath: IndexPath) -> TableViewCellViewModelType?
+    
+    func viewModelForSelectionRow() -> DetailViewModelType?
+    func selectRow(atIndexPath indexPath: IndexPath)
 }

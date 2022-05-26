@@ -9,7 +9,7 @@ import UIKit
 
 class TableViewController: UITableViewController {
     
-    var viewModel: tableViewViewModelType?
+    private var viewModel: tableViewViewModelType?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,7 +20,6 @@ class TableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
         return viewModel?.nomberOfRows() ?? 0
     }
 
@@ -33,5 +32,22 @@ class TableViewController: UITableViewController {
         tableViewCell.viewModel = cellViewModel
 
         return tableViewCell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let viewModel = viewModel else { return }
+        viewModel.selectRow(atIndexPath: indexPath)
+        
+        performSegue(withIdentifier: "detailSegue", sender: nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let identifier = segue.identifier, let viewModel = viewModel else { return }
+        
+        if identifier == "detailSegue" {
+            if let dvc = segue.destination as? DetailViewController {
+                dvc.viewModel = viewModel.viewModelForSelectionRow()
+            }
+        }
     }
 }
