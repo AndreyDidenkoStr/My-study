@@ -22,6 +22,7 @@
 		7CDA04A22837FE2E00AD2630 /* TableViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CDA04A12837FE2E00AD2630 /* TableViewModelType.swift */; };
 		7CDA04A62838027C00AD2630 /* TableViewCellViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CDA04A52838027C00AD2630 /* TableViewCellViewModelType.swift */; };
 		7CDA04A82838034D00AD2630 /* TableViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CDA04A72838034D00AD2630 /* TableViewCellViewModel.swift */; };
+		7CEEA8DB28411A0100AEB210 /* Box.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CEEA8DA28411A0100AEB210 /* Box.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		7CDA04A12837FE2E00AD2630 /* TableViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewModelType.swift; sourceTree = "<group>"; };
 		7CDA04A52838027C00AD2630 /* TableViewCellViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellViewModelType.swift; sourceTree = "<group>"; };
 		7CDA04A72838034D00AD2630 /* TableViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellViewModel.swift; sourceTree = "<group>"; };
+		7CEEA8DA28411A0100AEB210 /* Box.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Box.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +76,7 @@
 		7CDA04822837F67400AD2630 /* MVVM-2 */ = {
 			isa = PBXGroup;
 			children = (
+				7CEEA8DA28411A0100AEB210 /* Box.swift */,
 				7CDA04A32837FF3A00AD2630 /* ViewModel */,
 				7CDA04A42837FF4300AD2630 /* Protocols */,
 				7CDA049E2837F9D900AD2630 /* View */,
@@ -203,6 +206,7 @@
 				7CDA049A2837F71B00AD2630 /* Profile.swift in Sources */,
 				7CDA04842837F67400AD2630 /* AppDelegate.swift in Sources */,
 				7CDA04A22837FE2E00AD2630 /* TableViewModelType.swift in Sources */,
+				7CEEA8DB28411A0100AEB210 /* Box.swift in Sources */,
 				7C94A803283FDF6A008A72A3 /* DetailViewModelType.swift in Sources */,
 				7C94A805283FE01A008A72A3 /* DetailViewModel.swift in Sources */,
 				7CDA04A82838034D00AD2630 /* TableViewCellViewModel.swift in Sources */,
