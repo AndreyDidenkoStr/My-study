@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="vSq-3I-4IG">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
@@ -16,43 +16,94 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZD8-iU-2jb">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F7O-aX-JMu">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VEb-h4-94w">
+                                <rect key="frame" x="74" y="124" width="266" height="138"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain"/>
+                                <buttonConfiguration key="configuration" style="gray" title="Press to download Image"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v4r-QV-V0q">
+                                <rect key="frame" x="74" y="308" width="266" height="138"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="GET"/>
                                 <connections>
-                                    <action selector="getImagePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QIk-Aa-1hL"/>
+                                    <action selector="getResponse:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0fD-qh-NIn"/>
                                 </connections>
                             </button>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="Lfr-gR-GVW">
-                                <rect key="frame" x="197" y="443" width="20" height="20"/>
-                            </activityIndicatorView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sFd-mb-72L">
+                                <rect key="frame" x="74" y="514" width="266" height="138"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="POST"/>
+                                <connections>
+                                    <action selector="postResponse:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QP0-gW-Uwc"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9LE-vx-hHH">
+                                <rect key="frame" x="74" y="124" width="266" height="138"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="Press to download Image"/>
+                                <connections>
+                                    <segue destination="BcX-KN-jDs" kind="show" id="xFC-jO-suP"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="Lfr-gR-GVW" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="BAS-qO-CMr"/>
-                            <constraint firstItem="Lfr-gR-GVW" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="LX8-nn-TUj"/>
-                            <constraint firstItem="F7O-aX-JMu" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Lmy-Zr-Fxq"/>
-                            <constraint firstAttribute="bottom" secondItem="ZD8-iU-2jb" secondAttribute="bottom" id="Udd-yk-PuA"/>
-                            <constraint firstItem="F7O-aX-JMu" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="ew8-Sf-wJQ"/>
-                            <constraint firstItem="ZD8-iU-2jb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="iG5-za-y8T"/>
-                            <constraint firstItem="ZD8-iU-2jb" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="r7o-pJ-Hk4"/>
-                            <constraint firstItem="F7O-aX-JMu" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="vvM-NP-AbJ"/>
-                            <constraint firstItem="F7O-aX-JMu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="w9E-8n-8ee"/>
-                            <constraint firstItem="ZD8-iU-2jb" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="yEH-ux-Rh2"/>
-                        </constraints>
                     </view>
-                    <connections>
-                        <outlet property="activityIndicator" destination="Lfr-gR-GVW" id="GcS-Z4-BkT"/>
-                        <outlet property="button" destination="F7O-aX-JMu" id="qTJ-t3-9OX"/>
-                        <outlet property="imageView" destination="ZD8-iU-2jb" id="MUi-uh-Zqy"/>
-                    </connections>
+                    <navigationItem key="navigationItem" id="eR7-vk-cSa"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="900.00000000000011" y="66.964285714285708"/>
+        </scene>
+        <!--Image View Controller-->
+        <scene sceneID="a1M-u9-h2s">
+            <objects>
+                <viewController id="BcX-KN-jDs" customClass="ImageViewController" customModule="Networking_Test_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="NBy-G7-4sF">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BMS-UP-QqI">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Ahh-go-AJu"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Ahh-go-AJu" firstAttribute="bottom" secondItem="BMS-UP-QqI" secondAttribute="bottom" id="GeG-wG-pwZ"/>
+                            <constraint firstItem="Ahh-go-AJu" firstAttribute="trailing" secondItem="BMS-UP-QqI" secondAttribute="trailing" id="MND-zE-iti"/>
+                            <constraint firstItem="BMS-UP-QqI" firstAttribute="top" secondItem="Ahh-go-AJu" secondAttribute="top" id="gvv-H3-VYa"/>
+                            <constraint firstItem="BMS-UP-QqI" firstAttribute="leading" secondItem="Ahh-go-AJu" secondAttribute="leading" id="qcF-fc-tEw"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="pr2-7X-1gM"/>
+                    <connections>
+                        <outlet property="imageView" destination="BMS-UP-QqI" id="JNd-zN-lBO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UKe-yJ-Ii5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1793" y="67"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="HXE-Z4-XTU">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="vSq-3I-4IG" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Zxy-nT-Xti">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="X2s-9e-aeZ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7k4-sc-XIr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="18.840579710144929" y="66.964285714285708"/>
         </scene>
