@@ -37,7 +37,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="gray" title="POST"/>
                                 <connections>
-                                    <action selector="postResponse:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QP0-gW-Uwc"/>
+                                    <action selector="postRquest:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lSh-hH-FJR"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9LE-vx-hHH">
