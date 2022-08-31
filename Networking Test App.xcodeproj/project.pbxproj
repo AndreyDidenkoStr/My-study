@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7C5C5E0C28BFDB6500981004 /* CoursesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C5C5E0B28BFDB6500981004 /* CoursesViewController.swift */; };
+		7C5C5E0E28BFDB9B00981004 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C5C5E0D28BFDB9B00981004 /* WebViewController.swift */; };
 		7C89665A28BE1BCE00E36998 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C89665928BE1BCE00E36998 /* AppDelegate.swift */; };
 		7C89665C28BE1BCE00E36998 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C89665B28BE1BCE00E36998 /* SceneDelegate.swift */; };
 		7C89665E28BE1BCE00E36998 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C89665D28BE1BCE00E36998 /* ViewController.swift */; };
@@ -17,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7C5C5E0B28BFDB6500981004 /* CoursesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursesViewController.swift; sourceTree = "<group>"; };
+		7C5C5E0D28BFDB9B00981004 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		7C89665628BE1BCE00E36998 /* Networking Test App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Networking Test App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C89665928BE1BCE00E36998 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7C89665B28BE1BCE00E36998 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -62,6 +66,8 @@
 				7C89665B28BE1BCE00E36998 /* SceneDelegate.swift */,
 				7C89665D28BE1BCE00E36998 /* ViewController.swift */,
 				7CC742B928BE31600050EC23 /* ImageViewController.swift */,
+				7C5C5E0B28BFDB6500981004 /* CoursesViewController.swift */,
+				7C5C5E0D28BFDB9B00981004 /* WebViewController.swift */,
 				7C89665F28BE1BCE00E36998 /* Main.storyboard */,
 				7C89666228BE1BCF00E36998 /* Assets.xcassets */,
 				7C89666428BE1BCF00E36998 /* LaunchScreen.storyboard */,
@@ -142,9 +148,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				7C89665E28BE1BCE00E36998 /* ViewController.swift in Sources */,
+				7C5C5E0E28BFDB9B00981004 /* WebViewController.swift in Sources */,
 				7C89665A28BE1BCE00E36998 /* AppDelegate.swift in Sources */,
 				7CC742BA28BE31600050EC23 /* ImageViewController.swift in Sources */,
 				7C89665C28BE1BCE00E36998 /* SceneDelegate.swift in Sources */,
+				7C5C5E0C28BFDB6500981004 /* CoursesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

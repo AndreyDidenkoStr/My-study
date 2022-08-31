@@ -31,15 +31,6 @@
                                     <action selector="getResponse:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0fD-qh-NIn"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sFd-mb-72L">
-                                <rect key="frame" x="74" y="514" width="266" height="138"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="gray" title="POST"/>
-                                <connections>
-                                    <action selector="postRquest:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lSh-hH-FJR"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9LE-vx-hHH">
                                 <rect key="frame" x="74" y="124" width="266" height="138"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -47,6 +38,24 @@
                                 <buttonConfiguration key="configuration" style="gray" title="Press to download Image"/>
                                 <connections>
                                     <segue destination="BcX-KN-jDs" kind="show" id="xFC-jO-suP"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ot7-KP-yyb">
+                                <rect key="frame" x="74" y="679" width="266" height="138"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="Our courses"/>
+                                <connections>
+                                    <segue destination="weO-o2-0Xy" kind="show" id="3VS-TO-1ep"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sFd-mb-72L">
+                                <rect key="frame" x="74" y="483" width="266" height="138"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="POST"/>
+                                <connections>
+                                    <action selector="postRquest:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lSh-hH-FJR"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -58,6 +67,70 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="900.00000000000011" y="66.964285714285708"/>
+        </scene>
+        <!--Courses View Controller-->
+        <scene sceneID="nYW-vA-cz0">
+            <objects>
+                <tableViewController id="weO-o2-0Xy" customClass="CoursesViewController" customModule="Networking_Test_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="WfF-A1-6gy">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="AMd-GB-Ulh">
+                                <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="AMd-GB-Ulh" id="NVg-cI-DDv">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="JbR-Te-ero" kind="show" id="Kv7-Y6-cC7"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="weO-o2-0Xy" id="9Zp-ST-kLM"/>
+                            <outlet property="delegate" destination="weO-o2-0Xy" id="ldL-TW-lMf"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="nhH-ZJ-hTw"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7gB-HD-bDW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1859" y="267"/>
+        </scene>
+        <!--Web View Controller-->
+        <scene sceneID="Zp7-iB-STD">
+            <objects>
+                <viewController id="JbR-Te-ero" customClass="WebViewController" customModule="Networking_Test_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ro9-1Y-ipt">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EKF-fZ-l6G">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="zwo-oG-T1v"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="EKF-fZ-l6G" firstAttribute="top" secondItem="zwo-oG-T1v" secondAttribute="top" id="Q4o-Ff-D6K"/>
+                            <constraint firstItem="EKF-fZ-l6G" firstAttribute="leading" secondItem="zwo-oG-T1v" secondAttribute="leading" id="Z4G-4w-oWv"/>
+                            <constraint firstItem="zwo-oG-T1v" firstAttribute="trailing" secondItem="EKF-fZ-l6G" secondAttribute="trailing" id="g0P-hh-6bi"/>
+                            <constraint firstItem="zwo-oG-T1v" firstAttribute="bottom" secondItem="EKF-fZ-l6G" secondAttribute="bottom" id="lCq-iZ-X2a"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="x8o-z0-a7B"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xlr-2r-PNF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2789" y="273"/>
         </scene>
         <!--Image View Controller-->
         <scene sceneID="a1M-u9-h2s">
@@ -87,7 +160,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UKe-yJ-Ii5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1793" y="67"/>
+            <point key="canvasLocation" x="1858" y="-455"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="HXE-Z4-XTU">
