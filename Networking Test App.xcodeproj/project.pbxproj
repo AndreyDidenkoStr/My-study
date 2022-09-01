@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7C2E7DAC28C1070B00275929 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C2E7DAA28C1070B00275929 /* TableViewCell.swift */; };
 		7C5C5E0C28BFDB6500981004 /* CoursesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C5C5E0B28BFDB6500981004 /* CoursesViewController.swift */; };
 		7C5C5E0E28BFDB9B00981004 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C5C5E0D28BFDB9B00981004 /* WebViewController.swift */; };
 		7C5C5E1028C0FC2000981004 /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C5C5E0F28C0FC2000981004 /* Course.swift */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7C2E7DAA28C1070B00275929 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		7C5C5E0B28BFDB6500981004 /* CoursesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursesViewController.swift; sourceTree = "<group>"; };
 		7C5C5E0D28BFDB9B00981004 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		7C5C5E0F28C0FC2000981004 /* Course.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
@@ -73,6 +75,7 @@
 				7C5C5E0B28BFDB6500981004 /* CoursesViewController.swift */,
 				7C5C5E1128C102F500981004 /* WebsiteDescription.swift */,
 				7C5C5E0D28BFDB9B00981004 /* WebViewController.swift */,
+				7C2E7DAA28C1070B00275929 /* TableViewCell.swift */,
 				7C89665F28BE1BCE00E36998 /* Main.storyboard */,
 				7C5C5E0F28C0FC2000981004 /* Course.swift */,
 				7C89666228BE1BCF00E36998 /* Assets.xcassets */,
@@ -156,6 +159,7 @@
 				7C89665E28BE1BCE00E36998 /* ViewController.swift in Sources */,
 				7C5C5E1028C0FC2000981004 /* Course.swift in Sources */,
 				7C5C5E1228C102F500981004 /* WebsiteDescription.swift in Sources */,
+				7C2E7DAC28C1070B00275929 /* TableViewCell.swift in Sources */,
 				7C5C5E0E28BFDB9B00981004 /* WebViewController.swift in Sources */,
 				7C89665A28BE1BCE00E36998 /* AppDelegate.swift in Sources */,
 				7CC742BA28BE31600050EC23 /* ImageViewController.swift in Sources */,

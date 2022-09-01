@@ -13,4 +13,5 @@ struct Course: Decodable {
     let link: String?
     let number_of_lessons: Int?
     let number_of_tests: Int?
+    let imageUrl: String?
 }
