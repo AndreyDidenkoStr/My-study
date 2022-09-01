@@ -8,10 +8,15 @@
 import UIKit
 
 class WebViewController: UIViewController {
-
+    
+    var courseName: String?
+    var courseURL: String?
+    
+    @IBOutlet weak var webview: UIWebView!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        guard let url = URL(string: courseURL!) else { return }
+        webview.loadRequest(URLRequest(url: url))
         
     }
     

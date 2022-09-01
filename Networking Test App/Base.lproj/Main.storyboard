@@ -116,7 +116,6 @@
                                     <outlet property="label" destination="B0o-Lj-0Jc" id="Kcg-Fa-gXi"/>
                                     <outlet property="nameLabel" destination="BT1-JU-ykM" id="1UX-U3-2Nj"/>
                                     <outlet property="numberLabel" destination="teJ-Mv-kEJ" id="y2T-XA-wk5"/>
-                                    <segue destination="JbR-Te-ero" kind="show" id="Kv7-Y6-cC7"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -126,6 +125,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="nhH-ZJ-hTw"/>
+                    <connections>
+                        <segue destination="JbR-Te-ero" kind="show" identifier="Identifier" id="33o-l8-G7y"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7gB-HD-bDW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -139,25 +141,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EKF-fZ-l6G">
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gvz-OF-rNe">
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <wkWebViewConfiguration key="configuration">
-                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
-                                    <wkPreferences key="preferences"/>
-                                </wkWebViewConfiguration>
-                            </wkWebView>
+                            </webView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="zwo-oG-T1v"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="EKF-fZ-l6G" firstAttribute="top" secondItem="zwo-oG-T1v" secondAttribute="top" id="Q4o-Ff-D6K"/>
-                            <constraint firstItem="EKF-fZ-l6G" firstAttribute="leading" secondItem="zwo-oG-T1v" secondAttribute="leading" id="Z4G-4w-oWv"/>
-                            <constraint firstItem="zwo-oG-T1v" firstAttribute="trailing" secondItem="EKF-fZ-l6G" secondAttribute="trailing" id="g0P-hh-6bi"/>
-                            <constraint firstItem="zwo-oG-T1v" firstAttribute="bottom" secondItem="EKF-fZ-l6G" secondAttribute="bottom" id="lCq-iZ-X2a"/>
+                            <constraint firstItem="gvz-OF-rNe" firstAttribute="top" secondItem="zwo-oG-T1v" secondAttribute="top" id="0p7-C5-WQV"/>
+                            <constraint firstItem="zwo-oG-T1v" firstAttribute="bottom" secondItem="gvz-OF-rNe" secondAttribute="bottom" id="9jM-nD-1Ce"/>
+                            <constraint firstItem="gvz-OF-rNe" firstAttribute="leading" secondItem="zwo-oG-T1v" secondAttribute="leading" id="WJS-0Z-PFF"/>
+                            <constraint firstItem="zwo-oG-T1v" firstAttribute="trailing" secondItem="gvz-OF-rNe" secondAttribute="trailing" id="wzz-Gx-j52"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="x8o-z0-a7B"/>
+                    <connections>
+                        <outlet property="webview" destination="gvz-OF-rNe" id="FCN-8g-VR4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xlr-2r-PNF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

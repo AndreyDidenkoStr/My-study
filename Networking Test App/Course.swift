@@ -11,7 +11,7 @@ struct Course: Decodable {
     let id: Int?
     let name: String?
     let link: String?
-    let number_of_lessons: Int?
-    let number_of_tests: Int?
+    let numberOfLessons: Int?
+    let numberofTests: Int?
     let imageUrl: String?
 }

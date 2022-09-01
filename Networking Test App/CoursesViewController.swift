@@ -10,6 +10,8 @@ import UIKit
 class CoursesViewController: UITableViewController {
     
     private var courses: [Course] = []
+    private var courseName: String?
+    private var courseURL: String?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,7 +28,9 @@ class CoursesViewController: UITableViewController {
             guard let data = data else { return }
             
             do {
-                self.courses = try JSONDecoder().decode([Course].self, from: data)
+                let decoder = JSONDecoder()
+                decoder.keyDecodingStrategy = .convertFromSnakeCase
+                self.courses = try decoder.decode([Course].self, from: data)
                 DispatchQueue.main.async {
                     self.tableView.reloadData()
                 }
@@ -43,11 +47,11 @@ class CoursesViewController: UITableViewController {
         cell.nameLabel.text = course.name
         
         
-        if let numberOfLessons = course.number_of_lessons {
+        if let numberOfLessons = course.numberOfLessons {
             cell.numberLabel.text = "\(numberOfLessons)"
         }
         
-        if let numberOfTests = course.number_of_tests {
+        if let numberOfTests = course.numberofTests {
             cell.label.text = "\(numberOfTests)"
         }
         DispatchQueue.global().async {
@@ -58,6 +62,15 @@ class CoursesViewController: UITableViewController {
                 cell.courseImage.image = UIImage(data: imageData)
             }
         }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let webViewController = segue.destination as! WebViewController
+        webViewController.courseName = courseName
+        webViewController.courseURL = courseURL
+        
+
+        
     }
 }
 
@@ -72,10 +85,18 @@ extension CoursesViewController {
         configureCell(cell: cell, for: indexPath)
         return cell
     }
-    
+}
+
+    extension CoursesViewController {
+        
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 100
     }
     
-    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let course = courses[indexPath.row]
+        courseName = course.name
+        courseURL = course.link
+        performSegue(withIdentifier: "Identifier", sender: self)
+    }
 }
